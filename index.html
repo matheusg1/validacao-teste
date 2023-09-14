@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <form class="d-flex justify-content-center align-items-center flex-fill" id="formRegistro">
+        <div class="my-auto p-4 col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 rounded-1">
+            <h1>Criar nova conta</h1>
+            <div class="input-group">
+                <div class="mb-sm-3 col-12 col-sm-5 col-xl-8 px-1">
+                    <label htmlFor="inputNome" class="form-label">Nome</label>
+                    <input type="text" class="form-control " id="inputNome" name="nome" />
+                    <div class="texto-validacao">
+                    </div>
+                </div>
+                <div class="mb-sm-3 col-12 col-sm-3 col-xl-3 px-1">
+                    <label htmlFor="inputNascimento" class="form-label">Nascimento</label>
+                    <input type="date" class="form-control" id="inputNascimento" name="nascimento" />
+                    <div class="texto-validacao">
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary w-100">
+            </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src='script.js'></script>
+</body>
+
+</html>
