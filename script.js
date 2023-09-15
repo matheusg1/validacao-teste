@@ -1,4 +1,17 @@
+const darkModeBtn = document.querySelector('#darkModeBtn')
+const body = document.body;
 
+localStorage.getItem('darkMode');
+if (localStorage.getItem('darkMode') == undefined) {
+    localStorage.setItem('darkMode', 'dark')
+}
+
+if (localStorage.getItem('darkMode') == 'dark') {
+    body.dataset.bsTheme = body.dataset.bsTheme = "dark"
+}
+if (localStorage.getItem('darkMode') == 'light') {
+    body.dataset.bsTheme = body.dataset.bsTheme = "light"
+}
 
 const campoNome = document.querySelector('#inputNome');
 const formRegistro = document.querySelector('#formRegistro')
@@ -44,4 +57,17 @@ const Toast = Swal.mixin({
 Toast.fire({
     icon: 'error',
     title: 'Campos incompletos'
+})
+
+
+
+darkModeBtn.addEventListener('click', function () {
+    if (body.dataset.bsTheme === 'light') {
+        localStorage.setItem('darkMode', 'dark')
+        body.dataset.bsTheme = body.dataset.bsTheme = 'dark';
+    }
+    else if (body.dataset.bsTheme === 'dark') {
+        localStorage.setItem('darkMode', 'light')
+        body.dataset.bsTheme = body.dataset.bsTheme = 'light';
+    }
 })
